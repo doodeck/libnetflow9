@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.7)
 project(libnetflow C CXX)
 
 option(NF9_MAKE_SHARED "If set, build a shared library version" ON)
-option(NF9_BUILD_TESTS "If set, build unit tests (requires googletest)" ON)
+option(NF9_BUILD_TESTS "If set, build unit tests (requires googletest)" OFF)
 option(NF9_FUZZ "Enable fuzzing with LLVM fuzzer" OFF)
 option(NF9_BUILD_BENCHMARK
   "If set, build benchmarks (requires google benchmark library)" OFF)
@@ -29,7 +29,12 @@ else ()
   add_library(netflow9 STATIC ${CXX_SRC})
 endif ()
 
-target_include_directories(netflow9 SYSTEM PUBLIC include)
+get_property(SRC_DIR DIRECTORY PROPERTY SOURCE_DIR)
+message(STATUS "tins include:" ${SRC_DIR}/external/libtins/include/)
+
+target_include_directories(netflow9 SYSTEM PUBLIC include
+  ${SRC_DIR}/external/libtins/include/
+)
 target_compile_features(netflow9 PRIVATE cxx_std_17)
 
 if (MSVC)
