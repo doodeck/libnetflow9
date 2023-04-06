@@ -7,7 +7,16 @@ information about the traffic.
 
 libnetflow9 is written in C++17, and has a compatible C API.
 
-# Building #
+## Badges ##
+
+### Building ###
+
+![build workflow](https://github.com/doodeck/libnetflow9/actions/workflows/cmake.yml/badge.svg)
+
+### Testing ###
+
+![test workflow](https://github.com/doodeck/libnetflow9/actions/workflows/tests.yml/badge.svg)
+
 
 ## Dependencies ##
 
@@ -32,6 +41,21 @@ cd build
 cmake ..
 make -j4
 ```
+
+## Building on MacOS M1
+
+```
+mkdir build
+cd build
+cmake .. -DCMAKE_C_COMPILER=/opt/homebrew/bin/gcc-12 -DCMAKE_CXX_COMPILER=/opt/homebrew/bin/g++-12
+cmake --build .
+```
+
+Otherwise it defaults to Clang toolset, which as of version:  
+
+Apple clang version 14.0.0 (clang-1400.0.29.202)  
+
+is incapable of compiling the library.
 
 ## Building and running tests ##
 
