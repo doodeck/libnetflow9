@@ -55,7 +55,7 @@ cmake --build .
 
 Otherwise it defaults to Clang toolset, which as of version:  
 
-Apple clang version 14.0.0 (clang-1400.0.29.202)  
+`Apple clang version 14.0.0 (clang-1400.0.29.202)`
 
 is incapable of compiling the library. More details in the build log
 

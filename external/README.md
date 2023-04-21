@@ -3,7 +3,7 @@
 The external libraries are not used by default, instead it's expected they
 are installed system-wide. System libraries have advantages, e.g. you can
 rely on them in an airgapped environment. On the other hand, they are missing
-from some distributions while building online.
+from some distributions.
 
 In order to activate the external libraries set to ON the correspoding cmake
 option[-s]:
