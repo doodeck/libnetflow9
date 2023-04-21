@@ -3,7 +3,7 @@ name: Tests
 
 on:
   push:
-    branches: [ "master" ] # , "feature_branch_no_history"
+    branches: [ "master", "feature_branch_no_history" ]
   pull_request:
     branches: [ "master" ]
 
@@ -28,13 +28,15 @@ jobs:
       run: sudo apt-get install -y libtins-dev
 
     - name: Configure CMake
-      run: cmake -B ${{github.workspace}}/build \
-             -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DNF9_BUILD_TESTS=ON
+      run: |
+        cmake -B ${{github.workspace}}/build \
+          -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DNF9_BUILD_TESTS=ON
 
     - name: Build Tests
       # Build your program with the given configuration
-      run: cmake --build ${{github.workspace}}/build \
-             --config ${{env.BUILD_TYPE}}
+      run: |
+        cmake --build ${{github.workspace}}/build \
+          --config ${{env.BUILD_TYPE}}
 
     - name: Test
       working-directory: ${{github.workspace}}/build
