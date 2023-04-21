@@ -15,7 +15,9 @@ libnetflow9 is written in C++17, and has a compatible C API.
 
 ### Testing ###
 
-![test workflow](https://github.com/doodeck/libnetflow9/actions/workflows/tests.yml/badge.svg)
+![test workflow sys](https://github.com/doodeck/libnetflow9/actions/workflows/tests.yml/badge.svg)
+
+![test workflow own](https://github.com/doodeck/libnetflow9/actions/workflows/tests-own.yml/badge.svg)
 
 
 ## Dependencies ##
