@@ -3,7 +3,7 @@ name: CMake
 
 on:
   push:
-    branches: [ "master" ] # , "feature_branch_no_history"
+    branches: [ "master", "feature_branch_no_history" ]
   pull_request:
     branches: [ "master" ]
 
@@ -19,11 +19,12 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Configure CMake
-      run: cmake -B ${{github.workspace}}/build \
-             -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DNF9_BUILD_TESTS=OFF
+      run: |
+        cmake -B ${{github.workspace}}/build \
+          -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DNF9_BUILD_TESTS=OFF
 
     - name: Build
       # Build your program with the given configuration
-      run: cmake --build ${{github.workspace}}/build \
-             --config ${{env.BUILD_TYPE}}
-
+      run: |
+        cmake --build ${{github.workspace}}/build \
+          --config ${{env.BUILD_TYPE}}

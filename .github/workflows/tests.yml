@@ -3,7 +3,7 @@ name: Tests
 
 on:
   push:
-    branches: [ "master", "feature_branch_no_history" ]
+    branches: [ "master" ] # , "feature_branch_no_history"
   pull_request:
     branches: [ "master" ]
 
