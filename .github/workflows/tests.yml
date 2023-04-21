@@ -3,7 +3,7 @@ name: TestsSysLibs
 
 on:
   push:
-    branches: [ "master" ] # , "feature_branch_no_history"
+    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
