@@ -21,7 +21,7 @@ jobs:
     - name: Install libpcap
       run: sudo apt-get install -y libpcap-dev
     
-    -name Install googletest
+    - name: Install googletest
       run: sudo apt-get install -y libgtest-dev
 
     - name: Install libtins
