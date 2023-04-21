@@ -1,5 +1,5 @@
 # Build the library without tests
-name: CMake
+name: Build
 
 on:
   push:

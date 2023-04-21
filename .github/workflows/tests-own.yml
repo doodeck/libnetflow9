@@ -1,5 +1,5 @@
 # Build tests using external libraries referencd by the project
-name: TestsOwn
+name: TestsOwnLibs
 
 on:
   push:
