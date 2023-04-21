@@ -55,7 +55,10 @@ Otherwise it defaults to Clang toolset, which as of version:
 
 Apple clang version 14.0.0 (clang-1400.0.29.202)  
 
-is incapable of compiling the library.
+is incapable of compiling the library. More details in the build log
+
+https://github.com/doodeck/libnetflow9/actions/runs/4681045806/jobs/8293144058
+
 
 ## Building and running tests ##
 
