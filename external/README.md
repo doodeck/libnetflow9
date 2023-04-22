@@ -23,6 +23,6 @@ pulled directly from github release as recommended here:
 
 https://github.com/google/googletest/blob/main/googletest/README.md
 
-See overthere the description below the last bullet point "Use CMake
+Overthere see the description below the last bullet point "Use CMake
 to download GoogleTest as part of the build's configure step. This approach
 doesn't have the limitations of the other methods."
