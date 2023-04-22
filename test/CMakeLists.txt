@@ -18,7 +18,6 @@ else()
     # compiler/linker settings
     set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
     FetchContent_MakeAvailable(googletest)
-    message(DEBUG "googletest populate: " ${googletest_SOURCE_DIR} " " ${googletest_BINARY_DIR}) # FIXME: remove
     list (APPEND GTEST_LIBRARIES
         gtest_main
     )
@@ -28,7 +27,6 @@ if (NOT NF9_USE_OWN_LIBTINS)
     find_library(LIBTINS_LIBRARIES tins)
 else()
     get_property(SRC_DIR DIRECTORY PROPERTY SOURCE_DIR)
-    message(DEBUG "tins libs: " ${SRC_DIR}/../external/libtins/build/lib/) # FIXME: remove
     find_library(LIBTINS_LIBRARIES tins 
       ${SRC_DIR}/../external/libtins/build/lib/)
 endif()

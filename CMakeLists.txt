@@ -35,7 +35,6 @@ if (NOT NF9_USE_OWN_LIBTINS)
   target_include_directories(netflow9 SYSTEM PUBLIC include)
 else ()
   get_property(SRC_DIR DIRECTORY PROPERTY SOURCE_DIR)
-  message(DEBUG "tins include:" ${SRC_DIR}/external/libtins/include/) # FIXME: remove
   target_include_directories(netflow9 SYSTEM PUBLIC include
     ${SRC_DIR}/external/libtins/include/
   )
